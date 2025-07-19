@@ -974,4 +974,105 @@ header .hamburger.active span:nth-child(3) {
   }
 }
 
+  /* === COLOR SCHEME === */
+:root {
+  --brand-blue: #2E3192;
+  --cta-orange: #FF6B35;
+  --soft-white: #F7F7F7;
+  --dark-gray: #2B2B2B;
+  --aqua-accent: #00C2CB;
+  --highlight-yellow: #fff4d6;
+}
+
+/* === GLOBAL TEXT CLEANUP === */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--dark-gray);
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--brand-blue);
+  margin-bottom: 20px;
+}
+
+/* === SECTION STYLING === */
+section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+section:nth-of-type(even) {
+  background-color: var(--soft-white);
+}
+
+/* === CTA BUTTONS === */
+a.btn, .btn, .cta-button, .fixed-cta-button {
+  background-color: var(--cta-orange);
+  color: #ffffff;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+a.btn:hover, .btn:hover, .cta-button:hover, .fixed-cta-button:hover {
+  background-color: #e2551d;
+}
+
+/* === CONTAINERS === */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* === SECTION HEADERS === */
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* === PRICE CARDS & FEATURE BLOCKS === */
+.pricing-card, .feature-card {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 30px;
+  transition: transform 0.2s ease;
+}
+.pricing-card:hover, .feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* === FAQ Accordion Buttons === */
+.accordion {
+  background: var(--soft-white);
+  color: var(--brand-blue);
+  border: 2px solid var(--brand-blue);
+  font-weight: bold;
+}
+.accordion:hover {
+  background: #e9ebf8;
+}
+
+/* === SWIPER STYLING FIX === */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--cta-orange);
+}
+
+/* === HIGHLIGHT TEXT === */
+.highlight {
+  background: var(--cta-orange);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
 }
