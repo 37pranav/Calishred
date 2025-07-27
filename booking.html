@@ -16,6 +16,19 @@
       margin: 0;
       padding: 0;
     }
+    header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 999;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
     .container {
       max-width: 1200px;
       margin: auto;
@@ -101,7 +114,7 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="container" style="padding-top: 60px;">
+    <div class="container">
       <div class="logo">
         <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="160"></a>
       </div>
@@ -178,3 +191,4 @@
   </footer>
 </body>
 </html>
+
