@@ -22,21 +22,21 @@
       padding: 20px;
     }
     .section {
-      margin-top: 40px;
+      margin-top: 80px;
     }
     .booking-box {
       background: #ffffff;
       border: 1px solid #ccc;
       border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 32px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 32px;
+      margin-bottom: 48px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
     }
     .sub-box {
       background: #f9f9f9;
-      padding: 16px;
-      border-radius: 8px;
-      margin-top: 16px;
+      padding: 24px;
+      border-radius: 10px;
+      margin-top: 24px;
     }
     h1, h2, h3, h4 {
       font-family: 'Coda Caption', sans-serif;
@@ -49,9 +49,9 @@
       display: inline-block;
       background-color: #2E3192;
       color: #fff;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border-radius: 8px;
-      margin: 8px 8px 0 0;
+      margin: 12px 12px 0 0;
       text-decoration: none;
       font-weight: bold;
     }
@@ -82,12 +82,26 @@
     .footer-logo-text img {
       margin-top: 10px;
     }
+    .theme-section {
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+    }
+    .theme-light {
+      background: #f9f9f9;
+    }
+    .theme-white {
+      background: #ffffff;
+    }
+    .theme-blue {
+      background: #E6EBFA;
+    }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="container">
+    <div class="container" style="padding-top: 60px;">
       <div class="logo">
         <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="160"></a>
       </div>
@@ -96,12 +110,9 @@
 
   <!-- Main Content -->
   <div class="container">
-    <section class="section">
-      <h1>Choose Your Booking Option</h1>
-
-      <!-- Option A: Custom Plan + Strategy Call -->
+    <section class="section theme-section theme-light">
+      <h1>1️⃣ Custom Plan + Strategy Call (20 min)</h1>
       <div class="booking-box">
-        <h2>📞 Custom Plan + Strategy Call (20 min)</h2>
         <p>Perfect if you're starting fresh or need direction.</p>
         <ul>
           <li>Personalized workout + nutrition blueprint</li>
@@ -110,10 +121,11 @@
         </ul>
         <a href="https://yourtidycal.com/strategycall" class="cta-button">Book Now</a>
       </div>
+    </section>
 
-      <!-- Option B: Session Booking with Smart Filter -->
+    <section class="section theme-section theme-blue">
+      <h1>2️⃣ Book a Personal Training Session</h1>
       <div class="booking-box">
-        <h2>💪 Book a Personal Training Session</h2>
         <p>Already bought sessions? Skip straight to scheduling. New here? Start with payment.</p>
 
         <h3>Have you already purchased a session pack?</h3>
@@ -133,6 +145,14 @@
           <h4>Step 3: Schedule Your Session</h4>
           <p><a href="https://yourtidycal.com/session-scheduler" target="_blank">Go to Scheduler</a></p>
         </div>
+      </div>
+    </section>
+
+    <section class="section theme-section theme-white">
+      <h1>Need Help Deciding?</h1>
+      <div class="booking-box">
+        <p>If you're unsure which option suits you best, book a free call and let's talk about your goals, limitations, and what plan works for your schedule + fitness level.</p>
+        <a href="https://yourtidycal.com/strategycall" class="cta-button">Book Free Call</a>
       </div>
     </section>
   </div>
