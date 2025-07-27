@@ -10,22 +10,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-  font-family: 'Oswald', sans-serif;
-  background: #ffffff;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  line-height: 1.6;
-}
+      font-family: 'Oswald', sans-serif;
+      background: #ffffff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
     header {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  z-index: 999;
-  padding: 4px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 999;
+      padding: 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
     header .container {
       display: flex;
       align-items: center;
@@ -41,21 +39,29 @@
     }
     .booking-box {
       background: #ffffff;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      padding: 32px;
-      margin-bottom: 48px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+      border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 36px;
+      margin: 32px 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+      text-align: center;
     }
-    .sub-box {
-      background: #f9f9f9;
-      padding: 24px;
-      border-radius: 10px;
-      margin-top: 24px;
+    .booking-box:hover {
+      transform: translateY(-4px);
+    }
+    .booking-box img {
+      max-width: 80px;
+      margin-bottom: 16px;
     }
     h1, h2, h3, h4 {
       font-family: 'Coda Caption', sans-serif;
       margin-top: 0;
+    }
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 16px;
     }
     ul {
       padding-left: 20px;
@@ -65,8 +71,9 @@
       background-color: #2E3192;
       color: #fff;
       padding: 14px 28px;
+      font-size: 16px;
       border-radius: 8px;
-      margin: 12px 12px 0 0;
+      margin: 12px 8px 0 0;
       text-decoration: none;
       font-weight: bold;
     }
@@ -77,6 +84,29 @@
     }
     a.cta-button:hover {
       background-color: #1e2179;
+    }
+    .tooltip {
+      position: relative;
+      cursor: help;
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      font-size: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
     }
     .footer-container {
       padding: 40px 20px;
@@ -98,34 +128,21 @@
       margin-top: 10px;
     }
     .theme-section {
-  padding: 80px 30px;
-  border-radius: 16px;
-  margin-bottom: 80px;
-}
-    .theme-light {
-      background: #f9f9f9;
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin-bottom: 60px;
     }
-    .theme-white {
-      background: #ffffff;
-    }
-    .theme-blue {
-      background: #E6EBFA;
-    }
-  header.shrink {
-  padding: 2px 0 !important;
-}
-header.shrink img {
-  width: 90px !important;
-  transition: width 0.2s ease;
-}
-</style>
+    .theme-light { background: #f9f9f9; }
+    .theme-white { background: #ffffff; }
+    .theme-blue { background: #E6EBFA; }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="container">
       <div class="logo">
-        <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="120"></a>
+        <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="100"></a>
       </div>
     </div>
   </header>
@@ -133,37 +150,35 @@ header.shrink img {
   <!-- Main Content -->
   <div class="container">
     <section class="section theme-section theme-light">
-      <h1>1️⃣ Custom Workout/Nutrition Plan + Consultation</h1>
-<div class="booking-box">
-  <p>Select your preferred option:</p>
-  <ul>
-  <li><strong>Workout Plan Only:</strong> ₹499 <span title="Includes custom workouts, weekly structure & progression for your goal.">❓</span></li>
-  <li><strong>Workout + Nutrition Plan:</strong> ₹799 <span title="Includes the workout plan plus customized macros, daily meals & portion strategy.">❓</span></li>
-</ul>
-<img src="images/workout-plan.png" alt="Workout Plan Visual" width="80" style="margin-top: 16px;">
-  <a href="https://razorpay.com/workout-only" class="cta-button">Buy Workout Plan</a>
-  <a href="https://razorpay.com/full-plan" class="cta-button secondary">Buy Workout + Nutrition Plan</a>
-</div>
-</section>
+      <div class="booking-box">
+        <img src="Strategy.png" alt="Strategy Icon">
+        <h1>1️⃣ Custom Workout/Nutrition Plan + Consultation Call</h1>
+        <p>Choose your ideal plan:</p>
+        <ul>
+          <li class="tooltip" data-tooltip="Get a tailored fitness plan for your goal">Workout Plan Only – ₹499</li>
+          <li class="tooltip" data-tooltip="Includes both workout and personalized nutrition planning">Workout + Nutrition Plan – ₹799</li>
+        </ul>
+        <a href="https://yourtidycal.com/strategycall" class="cta-button">Book Plan + Call</a>
+      </div>
+    </section>
 
     <section class="section theme-section theme-blue">
-      <h1>2️⃣ Book a Personal Training Session</h1>
-<div class="booking-box">
-  <p>New clients can book a standalone session here.</p>
-  <p><strong>Single Session:</strong> ₹499 <span title="One 1-on-1 personal training session, tailored to your fitness level and goal.">❓</span></p>
-<img src="images/book-session.png" alt="Personal Training Visual" width="80" style="margin-top: 16px;">
-  <a href="https://razorpay.com/single-session" class="cta-button">Book Now</a>
-</div>
-</section>
+      <div class="booking-box">
+        <img src="Book.png" alt="Book Icon">
+        <h1>2️⃣ Book a Personal Training Session</h1>
+        <p class="tooltip" data-tooltip="Great for trying out a session or if you're not ready for a pack yet">Single Session – ₹499</p>
+        <a href="https://razorpay.com/single-session" class="cta-button">Buy & Book</a>
+      </div>
+    </section>
 
     <section class="section theme-section theme-white">
-  <h1>3️⃣ Schedule Your Session</h1>
-  <div class="booking-box">
-    <p>If you’ve already purchased a session pack, use the link below to schedule your next session. <span title="Scheduling is only available to active clients who’ve already paid.">❓</span></p>
-<img src="images/schedule-session.png" alt="Schedule Session Visual" width="80" style="margin-top: 16px;">
-    <a href="https://yourtidycal.com/session-scheduler" class="cta-button">Schedule Now</a>
-  </div>
-</section>
+      <div class="booking-box">
+        <img src="Schedule.png" alt="Schedule Icon">
+        <h1>3️⃣ Schedule Your Session</h1>
+        <p>If you’ve already purchased a session pack, proceed here to book your next one.</p>
+        <a href="https://yourtidycal.com/session-scheduler" class="cta-button">Schedule Now</a>
+      </div>
+    </section>
   </div>
 
   <!-- Footer -->
@@ -185,16 +200,5 @@ header.shrink img {
       </div>
     </div>
   </footer>
-<script>
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const logo = header.querySelector('img');
-    if (window.scrollY > 30) {
-      header.classList.add('shrink');
-    } else {
-      header.classList.remove('shrink');
-    }
-  });
-</script>
 </body>
 </html>
