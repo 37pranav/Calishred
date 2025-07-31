@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Book Your Calishred Plan</title>
   <link rel="icon" href="images/title-icon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Oswald', sans-serif;
@@ -35,7 +37,7 @@
       padding: 20px;
     }
     .section {
-      margin-top: 80px;
+      margin-top: 60px;
     }
     .booking-box {
       background: #ffffff;
@@ -43,13 +45,12 @@
       border-radius: 16px;
       padding: 36px;
       margin: 32px 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
       text-align: center;
-      transition: all 0.3s ease;
     }
     .booking-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
     }
     .booking-box img {
       max-width: 80px;
@@ -60,47 +61,37 @@
       margin-top: 0;
     }
     h1 {
-      font-size: 32px;
+      font-size: 30px;
       text-align: center;
-      margin-bottom: 24px;
-    }
-    .booking-box h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #1e2179;
-    }
-    .booking-box p, .booking-box ul {
-      font-size: 17px;
-      line-height: 1.6;
       margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
     }
     ul {
       padding-left: 0;
       list-style: none;
+      font-size: 16px;
     }
-    ul li::before {
-      content: "✔ ";
-      color: #2E3192;
-      font-weight: bold;
-    }
-    .price-highlight {
-      font-weight: bold;
-      font-size: 18px;
-      color: #000;
-      letter-spacing: 0.5px;
-      font-family: 'Oswald', sans-serif;
+    ul li {
+      margin: 10px 0;
     }
     a.cta-button {
       display: inline-block;
       background-color: #2E3192;
       color: #fff;
-      padding: 16px 32px;
-      font-size: 17px;
-      border-radius: 10px;
-      margin-top: 16px;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 12px 8px 0 0;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
+    }
+    a.cta-button.secondary {
+      background-color: #fff;
+      color: #2E3192;
+      border: 1px solid #2E3192;
     }
     a.cta-button:hover {
       background-color: #1e2179;
@@ -124,25 +115,33 @@
     .footer-logo-text img {
       margin-top: 10px;
     }
+    .theme-section {
+      padding: 60px 20px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+    }
+    .theme-light { background: #f9f9f9; }
+    .theme-white { background: #ffffff; }
+    .theme-blue { background: #E6EBFA; }
     @media (max-width: 600px) {
-      .booking-box img {
-        max-width: 64px;
+      .cta-button {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
       }
-      .booking-box h2 {
+      h1 {
         font-size: 22px;
       }
-      .booking-box p, .booking-box ul {
-        font-size: 15px;
+      .booking-box {
+        padding: 24px;
       }
-      .cta-button {
+      p, ul li {
         font-size: 15px;
-        padding: 12px 24px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container">
       <div class="logo">
@@ -150,37 +149,33 @@
       </div>
     </div>
   </header>
-
-  <!-- Main Content -->
   <div class="container">
-    <section class="section">
+    <section class="section theme-section theme-light">
       <div class="booking-box">
-        <img src="Strategy.png" alt="Consultation Icon" />
-        <h2>Book a Strategy Consultation Call + 4 Week Plan – <span class="price-highlight">₹499 / ₹799</span></h2>
-        <p>A focused 20-minute session plus a customized 4-week workout or full workout + nutrition plan tailored to your lifestyle and goal.</p>
+        <img src="images/Strategy.webp" alt="Strategy Icon">
+        <h1>Custom Plan + Consultation Call <span style="color:#2E3192">₹499 / ₹799</span></h1>
+        <p>Get a personalized 4-week workout or complete training + nutrition plan tailored to your goals, plus a 1:1 strategy call to align everything.</p>
         <ul>
-          <li>1-on-1 goal setting call</li>
-          <li>Custom 4-week workout plan – <span class="price-highlight">₹499</span></li>
-          <li>Workout + Nutrition plan bundle – <span class="price-highlight">₹799</span></li>
+          <li>Workout Plan – ₹499</li>
+          <li>Workout + Nutrition Plan – ₹799</li>
         </ul>
-        <a href="https://yourtidycal.com/strategycall" class="cta-button">Book Plan + Call</a>
+        <a href="https://yourtidycal.com/strategycall" class="cta-button">Book Now</a>
       </div>
+    </section>
 
+    <section class="section theme-section theme-blue">
       <div class="booking-box">
-        <img src="Book.png" alt="Coaching Icon" />
-        <h2>Book an Online Coaching Session – <span class="price-highlight">₹499</span></h2>
-        <p>A live, focused session tailored to your training needs — strength, fat loss, mobility or rehab.</p>
+        <img src="images/Schedule.webp" alt="Training Icon">
+        <h1>Book an Online Coaching Session <span style="color:#2E3192">₹499</span></h1>
+        <p>Train with me 1-on-1 from anywhere. Perfect if you want guidance, form checks or progress tuning. Book your next session now.</p>
         <ul>
-          <li>1-on-1 real-time coaching</li>
-          <li>Live form checks & cue corrections</li>
-          <li>Session goal: Your progress, maximized</li>
+          <li>One-Time Personal Training Session</li>
+          <li>₹499 per session</li>
         </ul>
-        <a href="https://razorpay.com/single-session" class="cta-button">Book Your Session</a>
+        <a href="https://razorpay.com/session-booking" class="cta-button">Book Session</a>
       </div>
     </section>
   </div>
-
-  <!-- Footer -->
   <footer>
     <div class="container footer-container">
       <hr class="footer-divider" />
@@ -194,7 +189,7 @@
         <a class="footer-links" href="/contact">Contact Us</a>
       </nav>
       <div class="footer-logo-text">
-        <img src="images/logo.png" alt="Calishred logo" width="150" />
+        <img src="images/logo.png" alt="Calishred logo" width="150">
         <p>© 2025 Calishred Fitness. All rights reserved.</p>
       </div>
     </div>
