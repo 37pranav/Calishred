@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Calishred</title>
+  <link rel="icon" href="images/title-icon.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+    }
+    header {
+      background: #ffffff;
+      padding: 12px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .intro {
+      text-align: center;
+      margin: 40px 0;
+      padding: 80px 20px 40px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+    }
+    form {
+      max-width: 600px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #2E3192;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1f226b;
+    }
+    .footer-container {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      background: #f5f5f5;
+      margin-top: 60px;
+    }
+    .footer-links {
+      margin: 0 10px;
+      color: #2E3192;
+      text-decoration: none;
+    }
+    .footer-divider {
+      margin: 20px 0;
+      border-top: 1px solid #ccc;
+    }
+    .footer-logo-text img {
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      .intro {
+        padding: 60px 10px 30px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="100"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="intro">
+      <h1>Get in Touch</h1>
+      <p>Have a question, idea, or want to collaborate? Drop us a message below and we'll get back to you ASAP.</p>
+    </div>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <hr class="footer-divider" />
+      <nav>
+        <a class="footer-links" href="/">Home</a>
+        <a class="footer-links" href="/program">Online Fitness Program</a>
+        <a class="footer-links" href="/recommended">Recommendations</a>
+        <a class="footer-links" href="/blogs">Blogs</a>
+        <a class="footer-links" href="/about">About</a>
+        <a class="footer-links" href="/legal">Legal</a>
+        <a class="footer-links" href="/contact">Contact Us</a>
+      </nav>
+      <div class="footer-logo-text">
+        <img src="images/logo.png" alt="Calishred logo" width="150">
+        <p>© 2025 Calishred Fitness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
