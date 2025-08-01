@@ -16,7 +16,7 @@
     }
     header {
       background: #ffffff;
-      padding: 16px 0;
+      padding: 10px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     header .container {
@@ -25,47 +25,47 @@
       justify-content: flex-start;
     }
     .container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
-    main.contact-main {
-      padding-top: 120px;
-      scroll-margin-top: 100px;
+    .contact-main {
+      padding: 100px 20px 60px;
     }
     h1 {
       font-size: 32px;
-      margin-bottom: 20px;
       text-align: center;
+      margin-bottom: 20px;
     }
     form {
+      max-width: 600px;
+      margin: auto;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 20px;
     }
-    input, textarea {
-      padding: 10px;
+    input, textarea, button {
+      padding: 12px;
       font-size: 16px;
-      border-radius: 4px;
       border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Oswald', sans-serif;
     }
     button {
-      padding: 12px;
       background-color: #2E3192;
       color: white;
-      font-size: 16px;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
     }
     button:hover {
-      background-color: #1d2170;
+      background-color: #1f236e;
     }
     footer {
       background: #f5f5f5;
       padding: 40px 20px;
       text-align: center;
       font-size: 14px;
+      margin-top: 60px;
     }
     .footer-links {
       margin: 0 10px;
@@ -79,10 +79,17 @@
     .footer-logo-text img {
       margin-top: 10px;
     }
+    @media screen and (max-width: 600px) {
+      .contact-main {
+        padding-top: 80px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container">
       <div class="logo">
@@ -91,18 +98,16 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container contact-main">
+  <main class="contact-main">
     <h1>Contact Us</h1>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="#" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <hr class="footer-divider" />
@@ -123,4 +128,3 @@
   </footer>
 </body>
 </html>
-
