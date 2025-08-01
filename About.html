@@ -30,17 +30,6 @@
       margin: auto;
       padding: 20px;
     }
-    .intro {
-      text-align: center;
-      margin: 40px 0;
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-      border-radius: 12px;
-    }
-    .intro h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
     .team-section {
       display: flex;
       flex-direction: column;
@@ -51,10 +40,10 @@
       width: 100%;
       max-width: 300px;
       text-align: center;
-      padding: 30px;
-      border: 2px solid #2E3192;
+      border: 1px solid #2E3192;
       border-radius: 12px;
-      background-color: #fff;
+      padding: 24px;
+      box-sizing: border-box;
     }
     .profile-card img {
       width: 200px;
@@ -81,6 +70,21 @@
       color: #555;
       margin-top: 8px;
     }
+    .intro {
+      text-align: center;
+      margin: 40px 0;
+      padding: 100px 20px 40px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
+    }
+    .linkedin-icon {
+      margin-top: 10px;
+    }
+    .linkedin-icon a {
+      color: #0A66C2;
+      text-decoration: none;
+      font-size: 24px;
+    }
     .footer-container {
       padding: 40px 20px;
       text-align: center;
@@ -99,6 +103,28 @@
     }
     .footer-logo-text img {
       margin-top: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .intro {
+        padding: 80px 10px 30px;
+      }
+      .profile-card img {
+        width: 150px;
+        height: 150px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
+      .profile-card {
+        padding: 20px 10px;
+      }
     }
   </style>
 </head>
@@ -122,20 +148,26 @@
     <div class="team-section">
       <div class="profile-card">
         <img src="images/Prashant.jpeg" alt="Developer 1">
-        <h2>Prashant</h2>
-        <p>Web Developer</p>
-        <p>Built the foundational structure and UI of Calishred.com</p>
-        <p class="quote">"I write code, break code, and fix code before anyone notices."</p>
+        <h2>Prashant </h2>
+        <p>Software Developer at Adobe</p>
+        <p>Enhanced Calishred’s frontend UX for speed, accessibility, and responsiveness across all devices — ensuring every user interaction feels sharp and effortless.</p>
+        <p class="quote">"Clean design, clean code — and just enough chaos to keep things interesting."</p>
+        <div class="linkedin-icon">
+          <a href="https://www.linkedin.com/in/thakur-prashant-singh/" target="_blank">🔗 LinkedIn</a>
+        </div>
       </div>
       <div class="profile-card">
         <img src="images/Nikhil.jpeg" alt="Developer 2">
-        <h2>Nikhil</h2>
-        <p>Front-End Engineer</p>
-        <p>Refined user interactions and ensured mobile responsiveness</p>
-        <p class="quote">"Making things pretty and fast, one pixel at a time."</p>
+        <h2>Nikhil Sourav</h2>
+        <p>Software Engineer at National Instruments</p>
+        <p>Architected the core site framework and backend logic powering Calishred’s booking, form, and integration systems.</p>
+        <p class="quote">"I solve problems with Java, Go, and cold logic — and still manage to keep the site from catching fire."</p>
+         <div class="linkedin-icon">
+          <a href="https://www.linkedin.com/in/nikhilsourav/" target="_blank">🔗 LinkedIn</a>
+        </div>
       </div>
       <div class="profile-card">
-        <img src="images/Pranav.jpg" alt="Pranav">
+        <img src="Pranav.jpg" alt="Pranav">
         <h2>Pranav</h2>
         <p>Founder & Head Coach</p>
         <p>Creator of Calishred – empowering individuals with smart, results-driven training</p>
