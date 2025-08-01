@@ -32,12 +32,13 @@
     }
     .team-section {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 40px;
     }
     .profile-card {
-      width: 260px;
+      width: 100%;
+      max-width: 300px;
       text-align: center;
     }
     .profile-card img {
@@ -58,6 +59,12 @@
     p {
       font-size: 16px;
       margin: 0;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
     }
     .intro {
       text-align: center;
@@ -107,18 +114,21 @@
         <h2>Developer 1</h2>
         <p>Web Developer</p>
         <p>Built the foundational structure and UI of Calishred.com</p>
+        <p class="quote">"I write code, break code, and fix code before anyone notices."</p>
       </div>
       <div class="profile-card">
         <img src="about_placeholders/dev2.png" alt="Developer 2">
         <h2>Developer 2</h2>
         <p>Front-End Engineer</p>
         <p>Refined user interactions and ensured mobile responsiveness</p>
+        <p class="quote">"Making things pretty and fast, one pixel at a time."</p>
       </div>
       <div class="profile-card">
         <img src="about_placeholders/founder.png" alt="Pranav">
         <h2>Pranav</h2>
         <p>Founder & Head Coach</p>
         <p>Creator of Calishred – empowering individuals with smart, results-driven training</p>
+        <p class="quote">"I lift, I build, I coach – and occasionally debug the site too."</p>
       </div>
     </div>
   </div>
