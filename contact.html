@@ -18,6 +18,7 @@
       background: #ffffff;
       padding: 12px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative; /* not sticky */
     }
     header .container {
       display: flex;
@@ -29,40 +30,41 @@
       margin: auto;
       padding: 20px;
     }
-    .main-section {
-      padding-top: 100px;
+    .contact-section {
+      padding: 80px 20px 40px; /* space below header */
       text-align: center;
     }
-    h1 {
+    .contact-section h1 {
       font-size: 36px;
       margin-bottom: 16px;
     }
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
+    .contact-section p {
+      font-size: 16px;
+      margin-bottom: 32px;
     }
     .contact-form {
-      max-width: 600px;
+      max-width: 500px;
       margin: auto;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
     .contact-form input,
     .contact-form textarea {
       padding: 12px;
-      font-size: 16px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
     }
     .contact-form button {
       background-color: #2E3192;
-      color: white;
-      padding: 14px;
+      color: #fff;
       border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 12px;
       font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
     }
     .footer-container {
       padding: 40px 20px;
@@ -84,11 +86,14 @@
       margin-top: 10px;
     }
     @media screen and (max-width: 600px) {
-      h1 {
+      .contact-section {
+        padding: 60px 10px 30px;
+      }
+      .contact-section h1 {
         font-size: 28px;
       }
-      p {
-        font-size: 16px;
+      .contact-section p {
+        font-size: 14px;
       }
     }
   </style>
@@ -103,11 +108,10 @@
     </div>
   </header>
 
-  <!-- Main Section -->
-  <div class="container main-section">
+  <!-- Contact Content -->
+  <div class="container contact-section">
     <h1>Contact Us</h1>
-    <p>Have questions, suggestions, or just want to connect? We're all ears.</p>
-
+    <p>Got questions, feedback, or need support? Drop us a message below and we’ll get back to you asap.</p>
     <form action="https://formspree.io/f/xjkoeyen" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
