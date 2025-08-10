@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Recommendations - Calishred</title>
+  <title>Calishred Recommendations</title>
   <link rel="icon" href="images/title-icon.png" />
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -10,7 +10,6 @@
     body {
       font-family: 'Oswald', sans-serif;
       margin: 0;
-      padding: 0;
       background: #fff;
       color: #000;
     }
@@ -18,7 +17,6 @@
       background: #ffffff;
       padding: 16px 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: relative;
     }
     header .container {
       display: flex;
@@ -33,63 +31,65 @@
     h1 {
       text-align: center;
       font-size: 36px;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
-    h2 {
+    .category {
+      margin-bottom: 50px;
+    }
+    .category h2 {
       font-size: 28px;
-      margin: 40px 0 20px;
       color: #2E3192;
+      margin-bottom: 20px;
       border-bottom: 2px solid #2E3192;
-      display: inline-block;
       padding-bottom: 5px;
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
     .product-card {
-      border: 2px solid #2E3192;
+      border: 1px solid #2E3192;
       border-radius: 12px;
-      padding: 16px;
-      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       background: #fff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
     }
     .product-card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      height: 200px;
+      object-fit: contain;
     }
     .product-card h3 {
       font-size: 18px;
-      margin: 10px 0;
+      margin: 15px 0 10px;
     }
     .product-card p {
       font-size: 14px;
       color: #555;
-      margin-bottom: 12px;
+      flex-grow: 1;
     }
     .product-card a {
       display: inline-block;
-      padding: 8px 16px;
-      background-color: #2E3192;
+      margin-top: 15px;
+      background: #2E3192;
       color: #fff;
-      text-decoration: none;
+      padding: 10px 15px;
       border-radius: 6px;
-      font-weight: 500;
+      text-decoration: none;
+      font-size: 14px;
     }
-    .footer-container {
-      padding: 40px 20px;
+    .product-card a:hover {
+      background: #1f226f;
+    }
+    footer {
+      background: #f5f5f5;
+      padding: 30px 20px;
       text-align: center;
       font-size: 14px;
-      background: #f5f5f5;
       margin-top: 60px;
     }
     .footer-links {
@@ -101,17 +101,14 @@
       margin: 20px 0;
       border-top: 1px solid #ccc;
     }
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-      h2 {
-        font-size: 22px;
-      }
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .category h2 { font-size: 22px; }
     }
   </style>
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="container">
@@ -121,64 +118,72 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <div class="container">
-    <h1>Recommended by Calishred</h1>
+    <h1>Calishred Recommendations</h1>
 
     <!-- Equipment -->
-    <h2>Equipment</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/product1.jpg" alt="Adjustable Dumbbells">
-        <h3>Adjustable Dumbbells</h3>
-        <p>Save space & train effectively with adjustable weight settings.</p>
-        <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
-      </div>
-      <div class="product-card">
-        <img src="images/product2.jpg" alt="Resistance Bands">
-        <h3>Resistance Bands</h3>
-        <p>Portable, versatile bands for full-body workouts anywhere.</p>
-        <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+    <div class="category">
+      <h2>Equipment</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/41atJDCAFkS._SX300_SY300_QL70_FMwebp_.jpg" alt="Kettlebell">
+          <h3>6kg Kettlebell</h3>
+          <p>Perfect for swings, squats, and presses. Compact and durable.</p>
+          <a href="https://m.media-amazon.com/images/I/41atJDCAFkS._SX300_SY300_QL70_FMwebp_.jpg" target="_blank">View on Amazon</a>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/811TabmuFbL._SX679_.jpg" alt="Resistance Bands">
+          <h3>Resistance Bands Set</h3>
+          <p>Versatile training tool for strength and mobility work.</p>
+          <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+        </div>
       </div>
     </div>
 
     <!-- Gear -->
-    <h2>Gear</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/product3.jpg" alt="Gym Gloves">
-        <h3>Gym Gloves</h3>
-        <p>Protect your hands & improve grip during heavy lifts.</p>
-        <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+    <div class="category">
+      <h2>Gear</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-images/workoutgloves.webp" alt="Workout Gloves">
+          <h3>Workout Gloves</h3>
+          <p>Grip better and protect your hands during training.</p>
+          <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+        </div>
       </div>
     </div>
 
-    <!-- Education / Books -->
-    <h2>Education / Books</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/product4.jpg" alt="Strength Training Book">
-        <h3>Strength Training 101</h3>
-        <p>Learn essential lifts, programming & recovery tips.</p>
-        <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+    <!-- Books -->
+    <div class="category">
+      <h2>Education / Books</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-images/strengthbook.webp" alt="Strength Training Book">
+          <h3>Strength Training Fundamentals</h3>
+          <p>Learn the basics and science behind building strength.</p>
+          <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+        </div>
       </div>
     </div>
 
     <!-- Supplements -->
-    <h2>Supplements</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/product5.jpg" alt="Whey Protein">
-        <h3>Whey Protein</h3>
-        <p>High-quality protein to boost recovery & muscle growth.</p>
-        <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+    <div class="category">
+      <h2>Supplements</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product-images/wheyprotein.webp" alt="Whey Protein">
+          <h3>Whey Protein</h3>
+          <p>High-quality protein to support muscle recovery.</p>
+          <a href="YOUR_AFFILIATE_LINK" target="_blank">View on Amazon</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-container">
+    <div class="container">
       <hr class="footer-divider" />
       <nav>
         <a class="footer-links" href="/">Home</a>
@@ -189,11 +194,12 @@
         <a class="footer-links" href="/legal">Legal</a>
         <a class="footer-links" href="/contact">Contact Us</a>
       </nav>
-      <div class="footer-logo-text">
+      <div>
         <img src="images/logo.png" alt="Calishred logo" width="150">
         <p>© 2025 Calishred Fitness. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
