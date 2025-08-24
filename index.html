@@ -1,195 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calishred | Home</title>
+  <meta charset="UTF-8">
+  <title>Calishred Fitness</title>
   <link rel="icon" href="images/title-icon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --deep-blue: #2E3192;
-      --black: #000000;
-      --white: #ffffff;
-      --text: #1f2937;
-      --bg: #f9fafb;
-      --light-gray: #e5e7eb;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Oswald', sans-serif;
-      background-color: var(--white);
-      color: var(--black);
-      line-height: 1.6;
+      background: #fff;
+      color: #000;
     }
-
     header {
-      background-color: var(--deep-blue);
-      color: var(--white);
-      padding: 20px 0;
-      text-align: center;
+      background: #ffffff;
+      padding: 12px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
-    header img {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1, h2 {
-      color: var(--deep-blue);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    p, li {
-      font-size: 1.1rem;
-      color: var(--black);
-      margin-bottom: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      height: 250px;
-      background-color: var(--light-gray);
+    header .container {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #666;
-      margin-top: 20px;
+      justify-content: flex-start;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
     }
-
-    .grid-4 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
     }
-
-    .grid-4 div {
-      flex: 1 1 45%;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      padding: 15px;
-      border-radius: 6px;
+    .intro {
       text-align: center;
+      padding: 60px 20px;
     }
-
+    .intro h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #2E3192;
+    }
+    .section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      margin-bottom: 40px;
+      border-radius: 12px;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #2E3192;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .card p {
+      font-size: 15px;
+      color: #333;
+    }
+    /* Footer */
     footer {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
+      background: #f5f5f5;
       padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
     }
-
-    footer a {
-      color: var(--deep-blue);
+    .footer-links {
       margin: 0 10px;
+      color: #2E3192;
       text-decoration: none;
     }
-
-    @media (max-width: 768px) {
-      h1, h2 {
-        font-size: 1.5rem;
-      }
-      .grid-4 div {
-        flex: 1 1 100%;
-      }
-      .image-placeholder {
-        height: 200px;
-      }
+    .footer-divider {
+      margin: 20px 0;
+      border-top: 1px solid #ccc;
+    }
+    .footer-logo-text img {
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      .intro h1 { font-size: 28px; }
+      .section h2 { font-size: 24px; }
     }
   </style>
 </head>
-
 <body>
-
+  <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="Calishred Logo">
-    <h1>Move Better. Live Stronger.</h1>
-    <p>Calisthenics-first fitness that trains you to move, perform, and endure—without the fluff.</p>
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="images/logo.png" alt="Calishred Logo" width="100"></a>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h2>Exercise Isn’t Optional. It’s Survival.</h2>
-      <p>Modern life keeps you still. Exercise resets your body and brain. It unlocks energy, clears mental fog, and rebuilds confidence. Calisthenics isn’t about burning calories. It’s about taking back control of your body.</p>
-      <div class="image-placeholder">[ Lifestyle Image Placeholder ]</div>
-    </section>
+  <!-- Intro -->
+  <div class="container intro">
+    <h1>Welcome to Calishred Fitness</h1>
+    <p>Your journey to strength, health, and transformation begins here. Explore the benefits of training and see how small steps lead to powerful results.</p>
+  </div>
 
-    <section class="section">
-      <h2>Why Calisthenics?</h2>
-      <ul>
-        <li><strong>Accessible:</strong> Train anywhere, no equipment needed.</li>
-        <li><strong>Functional:</strong> Strength, mobility, control in one.</li>
-        <li><strong>Scalable:</strong> Progress from basics to advanced levels.</li>
-        <li><strong>Efficient:</strong> Full-body training in less time.</li>
-      </ul>
-      <div class="image-placeholder">[ Movement Demo Image Placeholder ]</div>
-    </section>
+  <!-- Core Message Section -->
+  <div class="container section">
+    <h2>Exercise Isn’t Optional. It’s Survival.</h2>
+    <p>Modern life keeps you still. Exercise resets your body and brain. It unlocks energy, clears mental fog, and rebuilds confidence. Calisthenics isn’t about burning calories. It’s about taking back control of your body.</p>
+    <img src="images/lifestyle-placeholder.jpg" alt="Lifestyle" style="width:100%; border-radius:12px; margin:20px 0;">
+  </div>
 
-    <section class="section">
-      <h2>Move Well First</h2>
-      <p>Push. Pull. Squat. Hinge. Core. Mastering these with bodyweight builds athleticism. Calisthenics corrects imbalances, strengthens joints, and teaches control before loading weight.</p>
-    </section>
+  <!-- Why Calisthenics Section -->
+  <div class="container section">
+    <h2>Why Calisthenics?</h2>
+    <ul>
+      <li>Accessible: Train anywhere, no equipment needed.</li>
+      <li>Functional: Strength, mobility, control in one.</li>
+      <li>Scalable: Progress from basics to advanced levels.</li>
+      <li>Efficient: Full-body training in less time.</li>
+    </ul>
+    <img src="images/movement-placeholder.jpg" alt="Movement Demo" style="width:100%; border-radius:12px; margin:20px 0;">
+  </div>
 
-    <section class="section">
-      <h2>Fitness Is Discipline</h2>
-      <p>Calisthenics removes distractions. You vs gravity. It's not about aesthetics—it's about owning your movement. You build a body that performs and endures.</p>
-      <div class="image-placeholder">[ Focused Training Image Placeholder ]</div>
-    </section>
+  <!-- Move Well Section -->
+  <div class="container section">
+    <h2>Move Well First</h2>
+    <p>Push. Pull. Squat. Hinge. Core. Mastering these with bodyweight builds athleticism. Calisthenics corrects imbalances, strengthens joints, and teaches control before loading weight.</p>
+  </div>
 
-    <section class="section">
-      <h2>Who It’s For</h2>
-      <div class="grid-4">
-        <div>You want to feel strong without living in the gym</div>
-        <div>You’re starting from zero and need structure</div>
-        <div>You’re done with gimmicks and want what works</div>
-        <div>You respect discipline and hate BS</div>
-      </div>
-    </section>
+  <!-- Discipline Section -->
+  <div class="container section">
+    <h2>Fitness Is Discipline</h2>
+    <p>Calisthenics removes distractions. You vs gravity. It's not about aesthetics—it's about owning your movement. You build a body that performs and endures.</p>
+    <img src="images/focus-placeholder.jpg" alt="Focused Training" style="width:100%; border-radius:12px; margin:20px 0;">
+  </div>
 
-    <section class="section">
-      <h2>The Calishred Philosophy</h2>
-      <div class="grid-4">
-        <div><strong>Simplicity</strong><br>Train smart, not complicated</div>
-        <div><strong>Consistency</strong><br>Results come from showing up</div>
-        <div><strong>Function Over Flash</strong><br>We build performance, not just looks</div>
-      </div>
-    </section>
+  <!-- Who It's For -->
+  <div class="container section">
+    <h2>Who It’s For</h2>
+    <ul>
+      <li>You want to feel strong without living in the gym</li>
+      <li>You’re starting from zero and need structure</li>
+      <li>You’re done with gimmicks and want what works</li>
+      <li>You respect discipline and hate BS</li>
+    </ul>
+  </div>
 
-    <section class="section">
-      <h2>Final Note</h2>
-      <blockquote>“You don’t need permission to start. You don’t need perfect conditions. You just need to move—today.”</blockquote>
-    </section>
-  </main>
+  <!-- Philosophy Section -->
+  <div class="container section">
+    <h2>The Calishred Philosophy</h2>
+    <ul>
+      <li><strong>Simplicity</strong> – Train smart, not complicated</li>
+      <li><strong>Consistency</strong> – Results come from showing up</li>
+      <li><strong>Function Over Flash</strong> – We build performance, not just looks</li>
+    </ul>
+  </div>
 
+  <!-- Final Note -->
+  <div class="container section">
+    <h2>Final Note</h2>
+    <p><em>“You don’t need permission to start. You don’t need perfect conditions. You just need to move—today.”</em></p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Calishred Fitness. All rights reserved.</p>
-    <div>
-      <a href="/legal.html">Legal</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/about.html">About</a>
+    <div class="container footer-container">
+      <hr class="footer-divider" />
+      <nav>
+        <a class="footer-links" href="/">Home</a>
+        <a class="footer-links" href="/program">Online Fitness Program</a>
+        <a class="footer-links" href="/recommended">Recommendations</a>
+        <a class="footer-links" href="/blogs">Blogs</a>
+        <a class="footer-links" href="/about">About</a>
+        <a class="footer-links" href="/legal">Legal</a>
+        <a class="footer-links" href="/contact">Contact Us</a>
+      </nav>
+      <div class="footer-logo-text">
+        <img src="images/logo.png" alt="Calishred logo" width="150">
+        <p>© 2025 Calishred Fitness. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 </body>
