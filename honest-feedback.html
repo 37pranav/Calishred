@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honest Fitness Feedback | Calishred</title>
+  <meta name="description" content="Share your honest experience with fitness and help Calishred understand what people actually need.">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .feedback-page{min-height:100vh;background:#fafdff;color:#040707}
+    .feedback-hero{min-height:78vh;padding:150px 20px 90px;display:flex;align-items:center;text-align:center;background:radial-gradient(circle at 15% 20%,rgba(0,240,255,.18),transparent 28%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.12),transparent 30%),linear-gradient(135deg,#2E3192 0%,#007bff 55%,#1f1fff 100%);color:#fff;position:relative;overflow:hidden}
+    .feedback-hero::after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-160px;top:-160px}
+    .feedback-hero .container{position:relative;z-index:1}
+    .feedback-kicker{display:inline-block;margin-bottom:22px;padding:8px 15px;border:1px solid rgba(255,255,255,.45);border-radius:999px;font-family:"Roboto Mono",monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+    .feedback-hero h1{max-width:900px;margin:0 auto;font-family:"Anton",sans-serif;font-size:clamp(3.2rem,8vw,7.2rem);line-height:.95;letter-spacing:.5px;text-transform:uppercase}
+    .feedback-hero h1 span{color:#00f0ff}
+    .feedback-hero p{max-width:650px;margin:30px auto 0;font-family:"Inter",sans-serif;font-size:clamp(1rem,2vw,1.2rem);line-height:1.7;color:rgba(255,255,255,.92)}
+    .feedback-main{padding:85px 20px 100px}
+    .feedback-intro{max-width:760px;margin:0 auto 55px;text-align:center}
+    .feedback-intro .eyebrow{color:#2E3192;font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+    .feedback-intro h2{margin-top:14px;font-family:"Anton",sans-serif;font-size:clamp(2.3rem,5vw,4rem);line-height:1;text-transform:uppercase}
+    .feedback-intro p{margin:20px auto 0;max-width:650px;font-family:"Inter",sans-serif;line-height:1.7;color:#444}
+    .feedback-options{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1120px;margin:0 auto}
+    .feedback-card{display:flex;flex-direction:column;min-height:360px;padding:34px 30px 30px;background:#fff;border:1px solid rgba(4,7,7,.10);box-shadow:0 5px 15px rgba(0,0,0,.04),0 18px 45px rgba(0,0,0,.07);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .feedback-card:hover{transform:translateY(-7px);border-color:rgba(46,49,146,.35);box-shadow:0 8px 20px rgba(0,0,0,.06),0 25px 55px rgba(0,0,0,.10)}
+    .feedback-number{font-family:"Roboto Mono",monospace;font-size:13px;color:#2E3192;margin-bottom:25px}
+    .feedback-card h3{font-family:"Anton",sans-serif;font-size:2rem;line-height:1.05;text-transform:uppercase;margin-bottom:16px}
+    .feedback-card p{font-family:"Inter",sans-serif;color:#555;line-height:1.65;margin-bottom:28px}
+    .feedback-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;background:#2E3192;color:#fff;font-family:"Oswald",sans-serif;font-size:15px;letter-spacing:.8px;text-transform:uppercase;transition:background .2s ease,transform .2s ease}
+    .feedback-link:hover{background:#007bff;transform:translateX(2px)}
+    .feedback-link .arrow{font-size:20px;line-height:1}
+    .gift-section{max-width:1120px;margin:90px auto 0;padding:50px 45px;background:#040707;color:#fff;position:relative;overflow:hidden}
+    .gift-section::before{content:"THANK YOU";position:absolute;right:-20px;bottom:-45px;font-family:"Anton",sans-serif;font-size:9rem;line-height:1;color:rgba(255,255,255,.035);pointer-events:none}
+    .gift-section .gift-content{position:relative;z-index:1;max-width:700px}
+    .gift-label{color:#00f0ff;font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+    .gift-section h2{margin:12px 0 18px;font-family:"Anton",sans-serif;font-size:clamp(2.4rem,5vw,4rem);line-height:1;text-transform:uppercase}
+    .gift-section p{font-family:"Inter",sans-serif;line-height:1.7;color:rgba(255,255,255,.78)}
+    .gift-items{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .gift-item{padding:11px 15px;border:1px solid rgba(255,255,255,.18);font-family:"Oswald",sans-serif;font-size:14px}
+    .feedback-note{max-width:650px;margin:55px auto 0;text-align:center;font-family:"Inter",sans-serif;font-size:14px;line-height:1.7;color:#666}
+    .feedback-note strong{color:#222}
+    @media(max-width:850px){.feedback-options{grid-template-columns:1fr;max-width:620px}.feedback-card{min-height:300px}.gift-section{padding:40px 28px}}
+    @media(max-width:600px){.feedback-hero{min-height:72vh;padding:125px 20px 70px}.feedback-main{padding:65px 18px 75px}.feedback-card{padding:28px 24px 24px}.gift-section{margin-top:65px}.gift-section::before{font-size:5rem}}
+  </style>
+</head>
+<body>
+  <div class="feedback-page">
+    <header>
+      <div class="container">
+        <a href="index.html" aria-label="Calishred home"><img src="images/logo.png" alt="Calishred" class="logo-img"></a>
+        <div class="hamburger" aria-label="Open navigation" role="button" tabindex="0"><span></span><span></span><span></span></div>
+        <nav class="nav" aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      </div>
+    </header>
+    <section class="feedback-hero">
+      <div class="container">
+        <div class="feedback-kicker">A small favour from you</div>
+        <h1>Honest<br><span>Fitness</span><br>Feedback</h1>
+        <p>You've probably heard me talk about fitness at some point. I'm trying to understand what people actually struggle with — and I'd genuinely like to hear your perspective.</p>
+      </div>
+    </section>
+    <main class="feedback-main">
+      <div class="feedback-intro">
+        <div class="eyebrow">Which one describes you?</div>
+        <h2>Just pick one.</h2>
+        <p>Whether you're currently training with me, have trained with me before, or have simply known me through fitness, your honest answers will help me build something more useful.</p>
+      </div>
+      <section class="feedback-options">
+        <article class="feedback-card"><div class="feedback-number">01 / CURRENT CLIENT</div><h3>I'm currently training with you</h3><p>Tell me what's working, what's not, and what would make your fitness journey better.</p><a class="feedback-link" href="https://forms.gle/WnLrxXqBAacneU6s6" target="_blank" rel="noopener noreferrer">Give feedback <span class="arrow">→</span></a></article>
+        <article class="feedback-card"><div class="feedback-number">02 / FORMER CLIENT</div><h3>I've trained with you before</h3><p>Tell me what your experience was really like and what could have made you continue.</p><a class="feedback-link" href="https://forms.gle/kBvmeHuvo8zX95xi7" target="_blank" rel="noopener noreferrer">Give feedback <span class="arrow">→</span></a></article>
+        <article class="feedback-card"><div class="feedback-number">03 / PERSONAL NETWORK</div><h3>I've never trained with you</h3><p>You may be a friend, family member, colleague, or someone who's simply asked me about fitness before.</p><a class="feedback-link" href="https://forms.gle/nFhGRe4qpZwrfxDS7" target="_blank" rel="noopener noreferrer">Give feedback <span class="arrow">→</span></a></article>
+      </section>
+      <section class="gift-section"><div class="gift-content"><div class="gift-label">As a thank you</div><h2>I'll give you something useful.</h2><p>At the end of the survey, you can choose a small fitness-related gift from me — either a short fitness consultation or a four-week starter workout plan.</p><div class="gift-items"><div class="gift-item">01 — Fitness Consultation</div><div class="gift-item">02 — 4-Week Starter Plan</div></div></div></section>
+      <div class="feedback-note"><strong>No sales pitch.</strong> You don't need to be fit, you don't need to be a client, and there are no right answers. I just want the honest version.</div>
+    </main>
+  </div>
+  <script>
+    const header=document.querySelector("header"),hamburger=document.querySelector(".hamburger"),nav=document.querySelector(".nav");
+    function toggleMenu(){hamburger.classList.toggle("active");nav.classList.toggle("open")}
+    hamburger.addEventListener("click",toggleMenu);
+    hamburger.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleMenu()}});
+    window.addEventListener("scroll",()=>{if(window.scrollY>40)header.classList.add("sticky");else header.classList.remove("sticky")});
+  </script>
+</body>
+</html>
