@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honest Fitness Feedback | Calishred</title>
-  <meta name="description" content="Share your honest experience with fitness and help Calishred understand what people actually need.">
+  <meta name="description" content="Help Calishred understand what actually makes fitness work. Share your honest perspective.">
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .feedback-page{min-height:100vh;background:#fafdff;color:#040707}
-    .feedback-hero{min-height:78vh;padding:150px 20px 90px;display:flex;align-items:center;text-align:center;background:radial-gradient(circle at 15% 20%,rgba(0,240,255,.18),transparent 28%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.12),transparent 30%),linear-gradient(135deg,#2E3192 0%,#007bff 55%,#1f1fff 100%);color:#fff;position:relative;overflow:hidden}
-    .feedback-hero::after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-160px;top:-160px}
+    .feedback-hero{min-height:78vh;padding:150px 20px 90px;display:flex;align-items:center;text-align:center;background:#2E3192;color:#fff;position:relative;overflow:hidden}
+    .feedback-hero::before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-220px;top:-220px}
+    .feedback-hero::after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.06);border-radius:50%;left:-170px;bottom:-170px}
     .feedback-hero .container{position:relative;z-index:1}
-    .feedback-kicker{display:inline-block;margin-bottom:22px;padding:8px 15px;border:1px solid rgba(255,255,255,.45);border-radius:999px;font-family:"Roboto Mono",monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-    .feedback-hero h1{max-width:900px;margin:0 auto;font-family:"Anton",sans-serif;font-size:clamp(3.2rem,8vw,7.2rem);line-height:.95;letter-spacing:.5px;text-transform:uppercase}
-    .feedback-hero h1 span{color:#00f0ff}
-    .feedback-hero p{max-width:650px;margin:30px auto 0;font-family:"Inter",sans-serif;font-size:clamp(1rem,2vw,1.2rem);line-height:1.7;color:rgba(255,255,255,.92)}
+    .feedback-kicker{display:inline-block;margin-bottom:24px;font-family:"Roboto Mono",monospace;font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.78)}
+    .feedback-hero h1{max-width:900px;margin:0 auto;font-family:"Anton",sans-serif;font-size:clamp(2.8rem,6vw,5.8rem);line-height:.98;letter-spacing:.3px;text-transform:uppercase}
+    .feedback-hero p{max-width:760px;margin:32px auto 0;font-family:"Inter",sans-serif;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.6;color:rgba(255,255,255,.94)}
     .feedback-main{padding:85px 20px 100px}
     .feedback-intro{max-width:760px;margin:0 auto 55px;text-align:center}
     .feedback-intro .eyebrow{color:#2E3192;font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
@@ -27,13 +27,13 @@
     .feedback-number{font-family:"Roboto Mono",monospace;font-size:13px;color:#2E3192;margin-bottom:25px}
     .feedback-card h3{font-family:"Anton",sans-serif;font-size:2rem;line-height:1.05;text-transform:uppercase;margin-bottom:16px}
     .feedback-card p{font-family:"Inter",sans-serif;color:#555;line-height:1.65;margin-bottom:28px}
-    .feedback-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;background:#2E3192;color:#fff;font-family:"Oswald",sans-serif;font-size:15px;letter-spacing:.8px;text-transform:uppercase;transition:background .2s ease,transform .2s ease}
-    .feedback-link:hover{background:#007bff;transform:translateX(2px)}
+    .feedback-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;background:#2E3192;color:#fff;font-family:"Oswald",sans-serif;font-size:15px;letter-spacing:.8px;text-transform:uppercase;transition:transform .2s ease}
+    .feedback-link:hover{background:#2E3192;transform:translateX(2px)}
     .feedback-link .arrow{font-size:20px;line-height:1}
     .gift-section{max-width:1120px;margin:90px auto 0;padding:50px 45px;background:#040707;color:#fff;position:relative;overflow:hidden}
     .gift-section::before{content:"THANK YOU";position:absolute;right:-20px;bottom:-45px;font-family:"Anton",sans-serif;font-size:9rem;line-height:1;color:rgba(255,255,255,.035);pointer-events:none}
     .gift-section .gift-content{position:relative;z-index:1;max-width:700px}
-    .gift-label{color:#00f0ff;font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+    .gift-label{color:#fff;font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
     .gift-section h2{margin:12px 0 18px;font-family:"Anton",sans-serif;font-size:clamp(2.4rem,5vw,4rem);line-height:1;text-transform:uppercase}
     .gift-section p{font-family:"Inter",sans-serif;line-height:1.7;color:rgba(255,255,255,.78)}
     .gift-items{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
@@ -55,15 +55,15 @@
     </header>
     <section class="feedback-hero">
       <div class="container">
-        <div class="feedback-kicker">A small favour from you</div>
-        <h1>Honest<br><span>Fitness</span><br>Feedback</h1>
-        <p>You've probably heard me talk about fitness at some point. I'm trying to understand what people actually struggle with — and I'd genuinely like to hear your perspective.</p>
+        <div class="feedback-kicker">Help me build something better</div>
+        <h1>Honest Fitness<br>Feedback</h1>
+        <p>Help me understand what actually makes fitness work. I'm trying to understand what people actually struggle with, what gets in their way, and what would genuinely help. I'd really value your perspective.</p>
       </div>
     </section>
     <main class="feedback-main">
       <div class="feedback-intro">
-        <div class="eyebrow">Which one describes you?</div>
-        <h2>Just pick one.</h2>
+        <div class="eyebrow">Your perspective matters</div>
+        <h2>Which one describes you?</h2>
         <p>Whether you're currently training with me, have trained with me before, or have simply known me through fitness, your honest answers will help me build something more useful.</p>
       </div>
       <section class="feedback-options">
