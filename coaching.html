@@ -76,6 +76,19 @@
     .price small { font: 500 .95rem Inter, sans-serif; color: var(--muted); }
     .offer-note { color: var(--muted); font-size: .9rem; margin: 12px auto 24px; max-width: 490px; }
     .fine { color: #8996aa; font-size: .78rem; margin-top: 15px; }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; align-items: stretch; }
+    .price-card { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 25px 17px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+    .price-card.featured { border: 2px solid var(--blue-bright); background: linear-gradient(160deg, #10254a, var(--panel) 65%); box-shadow: 0 12px 34px rgba(23,107,255,.16); }
+    .duration { color: #9fc3ff; font-family: Oswald, sans-serif; font-size: 1.25rem; letter-spacing: .08em; margin-bottom: 12px; }
+    .actual-price { color: #8996aa; text-decoration: line-through; font-size: .98rem; }
+    .discounted-price { color: var(--white); font-family: Oswald, sans-serif; font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.15; margin: 5px 0; }
+    .saving { color: #79adff; font-size: .76rem; font-weight: 800; letter-spacing: .025em; min-height: 25px; }
+    .price-caption { color: var(--muted); font-size: .82rem; margin: 12px 0 20px; }
+    .price-card .button { width: 100%; margin-top: auto; padding-inline: 10px; font-size: .88rem; }
+    .popular { position: absolute; top: -13px; background: var(--blue); color: white; border-radius: 30px; padding: 3px 12px; font-size: .68rem; font-weight: 800; letter-spacing: .08em; }
+    .pricing-footnote { text-align: center; color: var(--muted); font-size: .84rem; margin-top: 22px; }
+
     .faq { max-width: 800px; }
     details { padding: 18px 0; border-bottom: 1px solid var(--line); }
     summary { cursor: pointer; font-weight: 700; }
@@ -88,8 +101,9 @@
     @media (max-width: 700px) {
       .hero { padding: 76px 0 66px; }
       section { padding: 58px 0; }
-      .problem-grid, .features, .steps, .fit-grid { grid-template-columns: 1fr; }
+      .problem-grid, .features, .steps, .fit-grid, .pricing-grid { grid-template-columns: 1fr; }
       .offer-card { padding: 26px 20px; }
+      .price-card { padding: 25px 22px; }
       .nav { min-height: 66px; }
     }
   </style>
@@ -158,17 +172,41 @@
       </div>
     </section>
 
-    <section class="how">
+    <section class="offer" id="enquire">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Your coaching journey</p>
-          <h2>Simple Process. <span class="accent">Clear Direction.</span></h2>
+          <p class="eyebrow">Choose your commitment</p>
+          <h2>One Coaching System. <span class="accent">Four Ways to Commit.</span></h2>
+          <p class="section-intro">Choose the duration that fits your goals. Longer commitments offer greater savings and more time to build consistency.</p>
         </div>
-        <div class="steps">
-          <article class="step"><div class="step-no">01</div><h3>Discovery Call</h3><p>Discuss your goals, current routine and challenges. We'll establish whether the programme is right for you.</p></article>
-          <article class="step"><div class="step-no">02</div><h3>Get Set Up</h3><p>Complete your onboarding and health-history forms, receive app access and get your initial workout and nutrition guidance.</p></article>
-          <article class="step"><div class="step-no">03</div><h3>Train, Track, Improve</h3><p>Follow your plan, track your habits and use weekly coaching to make adjustments and stay accountable.</p></article>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="duration">1 MONTH</p><p class="actual-price">₹4,000</p>
+            <p class="discounted-price">₹3,500</p><p class="saving">YOU SAVE ₹500 · 12.5% OFF</p>
+            <p class="price-caption">₹3,500 for one month</p>
+            <a class="button" href="https://tidycal.com/calishredpt/discovery" target="_blank" rel="noopener">Choose 1 Month</a>
+          </article>
+          <article class="price-card">
+            <p class="duration">3 MONTHS</p><p class="actual-price">₹12,000</p>
+            <p class="discounted-price">₹10,000</p><p class="saving">YOU SAVE ₹2,000 · 16.7% OFF</p>
+            <p class="price-caption">About ₹3,333 per month</p>
+            <a class="button" href="https://tidycal.com/calishredpt/discovery" target="_blank" rel="noopener">Choose 3 Months</a>
+          </article>
+          <article class="price-card featured">
+            <p class="popular">BEST VALUE</p><p class="duration">6 MONTHS</p>
+            <p class="actual-price">₹24,000</p>
+            <p class="discounted-price">₹15,000</p><p class="saving">YOU SAVE ₹9,000 · 37.5% OFF</p>
+            <p class="price-caption">₹2,500 per month</p>
+            <a class="button" href="https://tidycal.com/calishredpt/discovery" target="_blank" rel="noopener">Choose 6 Months</a>
+          </article>
+          <article class="price-card">
+            <p class="duration">12 MONTHS</p><p class="actual-price">₹48,000</p>
+            <p class="discounted-price">₹27,000</p><p class="saving">YOU SAVE ₹21,000 · 43.75% OFF</p>
+            <p class="price-caption">₹2,250 per month</p>
+            <a class="button" href="https://tidycal.com/calishredpt/discovery" target="_blank" rel="noopener">Choose 12 Months</a>
+          </article>
         </div>
+        <p class="pricing-footnote">Book a discovery call to discuss your goals and confirm the right coaching option. Payment details are shared after the call.</p>
       </div>
     </section>
 
@@ -189,19 +227,25 @@
       </div>
     </section>
 
-    <section class="offer" id="enquire">
+
+
+    <section class="how">
       <div class="wrap">
-        <div class="offer-card">
-          <p class="eyebrow">Founding batch · Limited intake</p>
-          <h3>Start Your 100-Day Fitness Challenge</h3>
-          <p class="section-intro" style="margin:0 auto">The first batch is limited to four participants so coaching and support remain focused.</p>
-          <div class="price">₹4,000 <small>/ month</small></div>
-          <p class="offer-note">Introductory monthly subscription for the first batch. Programme suitability and onboarding are confirmed during your discovery call.</p>
-          <a class="button" href="https://tidycal.com/calishredpt/discovery" target="_blank" rel="noopener">Book Your Discovery Call</a>
-          <p class="fine">No payment is taken on this page. If we decide to move forward, you'll receive the appropriate payment link and onboarding details.</p>
+        <div class="section-head">
+          <p class="eyebrow">Your coaching journey</p>
+          <h2>Simple Process. <span class="accent">Clear Direction.</span></h2>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-no">01</div><h3>Discovery Call</h3><p>Discuss your goals, current routine and challenges. We'll establish whether the programme is right for you.</p></article>
+          <article class="step"><div class="step-no">02</div><h3>Get Set Up</h3><p>Complete your onboarding and health-history forms, receive app access and get your initial workout and nutrition guidance.</p></article>
+          <article class="step"><div class="step-no">03</div><h3>Train, Track, Improve</h3><p>Follow your plan, track your habits and use weekly coaching to make adjustments and stay accountable.</p></article>
         </div>
       </div>
     </section>
+
+
+
+
 
     <section>
       <div class="wrap faq">
