@@ -24,13 +24,10 @@
     .navlinks a{color:var(--muted);font-size:.82rem;text-decoration:none}
     .navlinks a:hover,footer a:hover{color:#fff}
     .cta{display:inline-block;padding:10px 16px;border-radius:5px;background:var(--blue);color:#fff;text-decoration:none;font-size:.83rem;font-weight:700}
-    .intro{padding:76px 0 48px;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(23,107,255,.22),transparent 58%),#070b14;border-bottom:1px solid var(--line)}
-    .eyebrow{color:#83b2ff;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
     h1,h2{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;line-height:1.15}
-    h1{font-size:clamp(2.5rem,6vw,4.2rem);margin-bottom:15px}
-    h1 span{color:var(--bright)}
-    .intro p{max-width:680px;margin:0 auto;color:#c4cede}
-    .team{padding:52px 0 76px}
+    .team{padding:58px 0 76px}
+    .team-heading{text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:30px}
+    .team-heading span{color:var(--bright)}
     .team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
     .card{overflow:hidden;border:1px solid var(--line);border-radius:9px;background:linear-gradient(155deg,#101a2d,var(--panel));text-align:center}
     .card img{width:100%;height:250px;object-fit:cover;object-position:center 25%;background:#101a2d}
@@ -47,7 +44,7 @@
     .footerbrand{padding-top:20px}
     .footerbrand img{width:125px;margin:0 auto 8px}
     @media(max-width:850px){.nav{padding:12px 0;flex-wrap:wrap}.navlinks{order:3;width:100%;gap:10px 16px}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:560px){.team-grid{grid-template-columns:1fr}.card img{height:280px}.intro{padding:58px 0 38px}.team{padding:35px 0 55px}.cta{margin-left:auto}}
+    @media(max-width:560px){.team-grid{grid-template-columns:1fr}.card img{height:280px}.team{padding:38px 0 55px}.cta{margin-left:auto}}
   </style>
 </head>
 <body>
@@ -66,15 +63,9 @@
   </div>
 </header>
 <main>
-  <section class="intro">
-    <div class="wrap">
-      <p class="eyebrow">The people behind the platform</p>
-      <h1>MEET THE TEAM BEHIND <span>CALISHRED.</span></h1>
-      <p>Driven by passion and built with precision, Calishred brings together practical fitness coaching and thoughtful technology to make training more accessible, structured and effective.</p>
-    </div>
-  </section>
   <section class="team">
     <div class="wrap">
+      <h1 class="team-heading">MEET THE TEAM BEHIND <span>CALISHRED.</span></h1>
       <div class="team-grid">
         <article class="card">
           <img src="images/Prashant.jpeg" alt="Prashant" loading="lazy">
@@ -106,7 +97,6 @@
           </div>
         </article>
       </div>
-      <p class="founder-note">Calishred is built on a simple idea: move better, get stronger and make fitness a sustainable part of everyday life.</p>
     </div>
   </section>
 </main>
