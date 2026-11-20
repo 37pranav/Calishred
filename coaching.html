@@ -105,6 +105,14 @@
     </div>
   </header>
 
+  <script>
+    // Open the landing page at the offer and pricing section by default.
+    window.addEventListener("load", () => {
+      if (window.location.hash) return;
+      document.getElementById("enquire")?.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+  </script>
+
   <main>
     <section class="hero">
       <div class="wrap">
